@@ -1,0 +1,177 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.channel-list-sidebar {
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 0px 10px;
+  gap: 10px;
+}
+
+.channel-list-sidebar-icon img {
+  height: 70px;
+  width: 70px;
+  border-radius: 999px;
+}
+
+.channel-list-wrapper {
+  background-color: rgb(42, 42, 255);
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 20px 20px 0px 20px;
+}
+
+.channel-list-header {
+  color: white;
+  font-weight: bold;
+}
+
+.channel-search-container {
+}
+
+.channel-search-input {
+  border: 1px solid lightblue;
+  color: lightblue;
+  height: 25px;
+  background-color: rgb(91, 91, 252);
+  outline: none;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.channel-search-input::placeholder {
+  color: lightblue;
+}
+
+.team-channel-list {
+  color: white;
+}
+
+.team-channel-list-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team-channel-list-title {
+}
+
+.channel-preview {
+}
+
+.channel-preview-item {
+}
+
+.channel-preview-wrapper-selected {
+}
+
+.channel-preview-wrapper {
+}
+
+.auth-form-container {
+  height: 100%;
+  width: 100%;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-form-container-fields {
+  background-color: white;
+  width: 80%;
+  padding: 0px 20px;
+  border-radius: 5px;
+}
+
+.auth-form-container-mode {
+  font-weight: bold;
+  font-size: 35px;
+  margin: 40px 0px;
+}
+
+.auth-form-container-fields-input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 10px 0px;
+}
+
+.auth-form-container-fields-input label {
+  font-size: 18px;
+}
+
+.auth-form-container-fields-input input {
+  font-size: 18px;
+  padding: 5px 0px 5px 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.auth-form-container-fields-input input:focus {
+  outline: 2px solid blue;
+}
+
+.auth-form-container-swap-modes {
+  font-size: 18px;
+  margin: 20px 0px 40px 0px;
+}
+
+.auth-form-container-swap-modes span {
+  color: dodgerblue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.auth-form-container-fields-input button {
+  background-color: blue;
+  align-self: flex-start;
+  color: white;
+  border: 1px solid blue;
+  font-size: 18px;
+  padding: 20px 40px 20px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.channel-container {
+  width: 100%;
+}
+
+.str-chat__channel-list {
+  background: none !important;
+  height: auto !important;
+  flex: none !important;
+}
+
+.team-channel-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+.team-channel-header-name {
+  font-weight: bold;
+}
