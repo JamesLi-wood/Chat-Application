@@ -1,0 +1,16 @@
+.team-channel-list {
+  color: white;
+}
+
+.team-channel-list-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.str-chat__channel-list {
+  background: none !important;
+  height: auto !important;
+  flex: none !important;
+}

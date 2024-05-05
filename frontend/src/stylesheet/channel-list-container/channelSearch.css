@@ -1,0 +1,13 @@
+.channel-search-container input {
+  border: 1px solid lightblue;
+  color: lightblue;
+  height: 25px;
+  background-color: rgb(91, 91, 252);
+  outline: none;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.channel-search-container input::placeholder {
+  color: lightblue;
+}

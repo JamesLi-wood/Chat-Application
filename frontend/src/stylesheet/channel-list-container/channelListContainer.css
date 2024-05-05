@@ -1,0 +1,27 @@
+.channel-list-sidebar {
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 0px 10px;
+  gap: 10px;
+}
+
+.channel-list-sidebar-icon {
+  height: 70px;
+  width: 70px;
+  border-radius: 999px;
+}
+
+.channel-list-wrapper {
+  background-color: rgb(42, 42, 255);
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 20px 20px 0px 20px;
+}
+
+.channel-list-header {
+  color: white;
+  font-weight: bold;
+}
