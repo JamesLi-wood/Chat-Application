@@ -3,8 +3,8 @@ import { StreamChat } from "stream-chat";
 import { Chat } from "stream-chat-react";
 import Cookies from "universal-cookie";
 import { useState } from "react";
-import "./App.css";
 import "stream-chat-react/dist/css/index.css";
+import "./stylesheet";
 
 const cookies = new Cookies();
 const apiKey = "abunvsy9xqd7";
