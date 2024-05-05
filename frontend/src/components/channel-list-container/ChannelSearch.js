@@ -21,7 +21,6 @@ const ChannelSearch = () => {
   return (
     <div className="channel-search-container">
       <input
-        className="channel-search-input"
         type="text"
         placeholder="Search"
         value={query}

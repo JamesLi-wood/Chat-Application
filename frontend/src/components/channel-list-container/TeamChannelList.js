@@ -11,9 +11,7 @@ const TeamChannelList = ({
   if (error) {
     return type == "team" ? (
       <div className="team-channel-list">
-        <div className="team-channel-message">
-          Connection error, please wait a moment and try again.
-        </div>
+        <div>Connection error, please wait a moment and try again.</div>
       </div>
     ) : null;
   }
@@ -21,9 +19,7 @@ const TeamChannelList = ({
   if (loading) {
     return (
       <div className="team-channel-list">
-        <div className="team-channel-message">
-          Loading {type == "team" ? "channels" : "messages"} ...
-        </div>
+        <div>Loading {type == "team" ? "channels" : "messages"} ...</div>
       </div>
     );
   }
@@ -31,9 +27,7 @@ const TeamChannelList = ({
   return (
     <div className="team-channel-list">
       <div className="team-channel-list-header">
-        <div className="team-channel-list-title">
-          {type == "team" ? "Channels" : "Direct Messages"}
-        </div>
+        <div>{type == "team" ? "Channels" : "Direct Messages"}</div>
         <button
           onClick={() => {
             setCreateType(type);

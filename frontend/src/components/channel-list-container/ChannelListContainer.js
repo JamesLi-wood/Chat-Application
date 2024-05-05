@@ -6,12 +6,8 @@ const cookies = new Cookies();
 
 const Sidebar = ({ logOut }) => (
   <div className="channel-list-sidebar">
-    <div className="channel-list-sidebar-icon">
-      <img src="" alt="logo" />
-    </div>
-    <div className="channel-list-sidebar-icon">
-      <img src="" alt="logo" />
-    </div>
+    <img className="channel-list-sidebar-icon" src="" alt="logo" />
+    <img className="channel-list-sidebar-icon" src="" alt="logo" />
     <div>
       <button onClick={logOut}>LOGOUT</button>
     </div>
