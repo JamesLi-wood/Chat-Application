@@ -1,11 +1,18 @@
-.channel-preview {
-}
-
-.channel-preview-item {
-}
-
-.channel-preview-wrapper {
+.channel-preview-wrapper,
+.channel-preview-wrapper-selected {
+  cursor: pointer;
+  margin: 10px 0px;
 }
 
 .channel-preview-wrapper-selected {
+  background-color: rgb(80, 80, 255);
 }
+
+.channel-preview-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+

@@ -14,11 +14,12 @@
 
 .channel-list-wrapper {
   background-color: rgb(42, 42, 255);
-  width: 200px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   gap: 25px;
   padding: 20px 20px 0px 20px;
+  overflow-x: hidden;
 }
 
 .channel-list-header {
