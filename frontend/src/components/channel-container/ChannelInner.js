@@ -24,31 +24,25 @@ const TeamChannelHeader = ({ setIsEditing }) => {
 
     if (channel.type === "messaging") {
       return (
-        <div className="team-channel-header__name-wrapper">
+        <div className="team-channel-messaging-header">
           {members.map(({ user }, i) => (
-            <div key={i} className="team-channel-header__name-multi">
+            <div key={i} className="team-channel-messaging-user">
               <Avatar
                 image={user.image}
                 name={user.fullName || user.id}
                 size={32}
               />
-              <p className="team-channel-header__name user">
-                {user.fullName || user.id}
-              </p>
+              <div>{user.fullName || user.id}</div>
             </div>
           ))}
 
-          {additionalMembers > 0 && (
-            <p className="team-channel-header__name user">
-              and {additionalMembers} more
-            </p>
-          )}
+          {additionalMembers > 0 && <div>and {additionalMembers} more</div>}
         </div>
       );
     }
 
     return (
-      <div className="team-channel-header-name">
+      <div className="team-channel-team-header">
         # {channel.data.name} <span onClick={() => setIsEditing(true)}>+</span>
       </div>
     );
@@ -93,7 +87,7 @@ const ChannelInner = ({ setIsEditing }) => {
 
   return (
     <GiphyContext.Provider value={{ giphyState, setGiphyState }}>
-      <div style={{ display: "flex", width: "100%" }}>
+      <div className="channel-inner-container">
         <Window>
           <TeamChannelHeader setIsEditing={setIsEditing} />
           <MessageList />
