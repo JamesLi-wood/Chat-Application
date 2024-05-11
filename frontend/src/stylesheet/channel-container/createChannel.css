@@ -1,0 +1,46 @@
+.create-channel-container {
+  padding: 0px 20px;
+}
+
+.create-channel-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+  border-bottom: 1px solid gray;
+}
+
+.create-channel-header div {
+  font-weight: bold;
+}
+
+.create-channel-input {
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid gray;
+}
+
+.create-channel-input input {
+  background-color: rgba(211, 211, 211, 0.336);
+  border: 1px solid lightgray;
+  height: 30px;
+  padding-left: 20px;
+  border-radius: 5px;
+}
+
+.create-channel-error {
+  color: red;
+  margin-top: 20px;
+}
+
+.create-channel-button {
+  padding: 10px;
+  background-color: rgb(42, 42, 255);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,34 @@
+.user-list-container {
+  padding: 20px 0px;
+}
+
+.user-list-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.user-item-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-item-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-item-wrapper:hover {
+  background-color: rgba(211, 211, 211, 0.336);
+}
+
+.user-item-user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
