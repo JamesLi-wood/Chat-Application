@@ -1,12 +1,11 @@
 import Cookies from "universal-cookie";
 import { ChannelSearch, TeamChannelList, TeamChannelPreview } from "..";
-import { ChannelList } from "stream-chat-react";
+import { ChannelList, useChatContext } from "stream-chat-react";
 
 const cookies = new Cookies();
 
 const Sidebar = ({ logOut }) => (
   <div className="channel-list-sidebar">
-    <img className="channel-list-sidebar-icon" src="" alt="logo" />
     <img className="channel-list-sidebar-icon" src="" alt="logo" />
     <div>
       <button onClick={logOut}>LOGOUT</button>
@@ -20,12 +19,23 @@ const ServerName = () => (
   </div>
 );
 
+const customChannelTeamFilter = (channels) => {
+  return channels.filter((channel) => channel.type === "team");
+};
+
+const customChannelMessagingFilter = (channels) => {
+  return channels.filter((channel) => channel.type === "messaging");
+};
+
 const ChannelListContainer = ({
   isCreating,
   setIsCreating,
   setCreateType,
   setIsEditing,
 }) => {
+  const { client } = useChatContext();
+  const filters = { members: { $in: [client.userID] } };
+  
   const logOut = () => {
     cookies.remove("token");
     cookies.remove("userId");
@@ -34,7 +44,6 @@ const ChannelListContainer = ({
     cookies.remove("avatarURL");
     cookies.remove("hashedPassword");
     cookies.remove("phoneNumber");
-
     window.location.reload();
   };
 
@@ -45,8 +54,8 @@ const ChannelListContainer = ({
         <ServerName />
         <ChannelSearch />
         <ChannelList
-          filters={{}}
-          channelRenderFilterFn={() => {}}
+          filters={filters}
+          channelRenderFilterFn={customChannelTeamFilter}
           List={(listProps) => (
             <TeamChannelList
               {...listProps}
@@ -58,12 +67,17 @@ const ChannelListContainer = ({
             />
           )}
           Preview={(previewProps) => (
-            <TeamChannelPreview {...previewProps} type="team" />
+            <TeamChannelPreview
+              {...previewProps}
+              setIsCreating={setIsCreating}
+              setIsEditing={setIsEditing}
+              type="team"
+            />
           )}
         />
         <ChannelList
-          filters={{}}
-          channelRenderFilterFn={() => {}}
+          filters={filters}
+          channelRenderFilterFn={customChannelMessagingFilter}
           List={(listProps) => (
             <TeamChannelList
               {...listProps}
@@ -75,7 +89,12 @@ const ChannelListContainer = ({
             />
           )}
           Preview={(previewProps) => (
-            <TeamChannelPreview {...previewProps} type="messaging" />
+            <TeamChannelPreview
+              {...previewProps}
+              setIsCreating={setIsCreating}
+              setIsEditing={setIsEditing}
+              type="messaging"
+            />
           )}
         />
       </div>
