@@ -3,9 +3,8 @@ import Cookies from "universal-cookie";
 
 const cookies = new Cookies();
 const Auth = () => {
-  const [isSignUp, setIsSignUp] = useState(true);
-  const [errorMessage, setErrorMessage] = useState(false);
-  const [invalidForm, setInvalidForm] = useState(false);
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [error, setError] = useState({ state: false, message: "" });
   const [form, setForm] = useState({
     fullName: "",
     username: "",
@@ -16,7 +15,7 @@ const Auth = () => {
   });
 
   const switchMode = () => {
-    setInvalidForm(false);
+    setError({ ...error, state: false });
     setIsSignUp((setIsSignUp) => !setIsSignUp);
   };
 
@@ -39,8 +38,7 @@ const Auth = () => {
     );
 
     if (!response.ok) {
-      setErrorMessage(await response.text());
-      setInvalidForm(true);
+      setError({ ...error, state: true, message: await response.text() });
       return;
     }
 
@@ -142,7 +140,7 @@ const Auth = () => {
             </div>
           )}
 
-          {invalidForm && <div>{errorMessage}</div>}
+          {error.state && <div className="auth-form-error">{error.message}</div>}
 
           <div className="auth-form-input-fields">
             <button>{isSignUp ? "Sign up" : "Sign in"}</button>
