@@ -1,11 +1,24 @@
+.channel-inner-container {
+  width: 100%;
+  padding: 0px 20px;
+}
+
 .team-channel-header-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 20px;
+  padding: 20px 0px;
 }
 
-.team-channel-header-name {
+.team-channel-messaging-header,
+.team-channel-messaging-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.team-channel-team-header {
   font-weight: bold;
 }
