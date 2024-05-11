@@ -55,6 +55,10 @@
   margin-top: 20px;
 }
 
+.auth-form-error {
+  color: red;
+}
+
 .auth-form-swap-modes {
   font-size: 18px;
   margin: 20px 0px 40px 0px;
