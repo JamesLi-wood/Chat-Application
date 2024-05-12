@@ -9,3 +9,4 @@ export { default as ChannelInner } from "./channel-container/channelInner.css";
 export { default as CreateChannel } from "./channel-container/createChannel.css";
 export { default as EditChannel } from "./channel-container/editChannel.css";
 export { default as UserList } from "./channel-container/userList.css";
+export { default as ResultsDropdown } from "./channel-list-container/resultsDropdown.css";
