@@ -3,7 +3,6 @@ const TeamChannelList = ({
   error = false,
   loading,
   type,
-  isCreating,
   setIsCreating,
   setCreateType,
   setIsEditing,
@@ -31,7 +30,7 @@ const TeamChannelList = ({
         <button
           onClick={() => {
             setCreateType(type);
-            setIsCreating((prevState) => !prevState);
+            setIsCreating(true);
             setIsEditing(false);
           }}
         >
