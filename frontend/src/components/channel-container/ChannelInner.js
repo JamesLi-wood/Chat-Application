@@ -43,7 +43,10 @@ const TeamChannelHeader = ({ setIsEditing }) => {
 
     return (
       <div className="team-channel-team-header">
-        # {channel.data.name} <span onClick={() => setIsEditing(true)}>+</span>
+        # {channel.data.name}{" "}
+        <span style={{ cursor: "pointer" }} onClick={() => setIsEditing(true)}>
+          +
+        </span>
       </div>
     );
   };
