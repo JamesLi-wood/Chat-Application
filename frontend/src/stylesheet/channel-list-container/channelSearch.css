@@ -1,3 +1,7 @@
+.channel-search-container {
+  position: relative;
+}
+
 .channel-search-container input {
   border: 1px solid lightblue;
   color: lightblue;
