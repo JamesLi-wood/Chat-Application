@@ -8,3 +8,4 @@ export { default as ChannelSearch } from "./channel-list-container/ChannelSearch
 export { default as TeamChannelList } from "./channel-list-container/TeamChannelList";
 export { default as TeamChannelPreview } from "./channel-list-container/TeamChannelPreview";
 export { default as UserList } from "./channel-container/UserList";
+export { default as ResultsDropdown } from "./channel-list-container/ResultsDropdown";
