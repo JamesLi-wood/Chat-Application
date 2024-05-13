@@ -14,3 +14,11 @@
   height: auto !important;
   flex: none !important;
 }
+
+.team-channel-button {
+  border: 1px solid white;
+  background-color: inherit;
+  color: white;
+  
+  cursor: pointer;
+}

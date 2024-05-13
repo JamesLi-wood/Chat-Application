@@ -32,3 +32,17 @@
   flex-direction: row;
   align-items: center;
 }
+
+.user-item-selected,
+.user-item-notSelected {
+  height: 20px;
+  width: 20px;
+  border: none;
+  background-color: gray;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.user-item-selected {
+  background-color: green;
+}
