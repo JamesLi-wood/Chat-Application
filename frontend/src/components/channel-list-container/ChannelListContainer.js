@@ -8,7 +8,7 @@ const Sidebar = ({ logOut }) => (
   <div className="channel-list-sidebar">
     <img className="channel-list-sidebar-icon" src="" alt="logo" />
     <div>
-      <button onClick={logOut}>LOGOUT</button>
+      <button className="channel-list-button" onClick={logOut}>LOGOUT</button>
     </div>
   </div>
 );
