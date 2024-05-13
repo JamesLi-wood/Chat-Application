@@ -21,11 +21,21 @@ const EditChannel = ({ setIsEditing }) => {
   const { channel } = useChatContext();
   const [channelName, setChannelName] = useState("");
   const [selectedUsers, setSelectedUsers] = useState([]);
+  const [error, setError] = useState({ state: false, message: "" });
 
   const updateChannel = async (e) => {
     e.preventDefault();
-    const nameChange = channelName !== (channel.data.name || channel.data.id);
 
+    if (!channelName && selectedUsers.length == 0) {
+      setError({
+        ...error,
+        state: true,
+        message: "Channel name empty and users not selected",
+      });
+      return;
+    }
+
+    const nameChange = channelName !== channel.data.name;
     if (nameChange) {
       await channel.update(
         { name: channelName },
@@ -46,9 +56,17 @@ const EditChannel = ({ setIsEditing }) => {
     <div className="create-channel-container">
       <div className="create-channel-header">
         <div>Edit Channel</div>
-        <button onClick={() => setIsEditing(false)}>x</button>
+        <button
+          className="create-channel-header-button"
+          onClick={() => setIsEditing(false)}
+        >
+          x
+        </button>
       </div>
       <ChannelNameInput setChannelName={setChannelName} />
+      {error.state && (
+        <div className="create-channel-error">{error.message}</div>
+      )}
       <UserList setSelectedUsers={setSelectedUsers} />
       <button className="create-channel-button" onClick={updateChannel}>
         Save Changes
