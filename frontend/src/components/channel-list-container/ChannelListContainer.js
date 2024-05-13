@@ -15,7 +15,7 @@ const Sidebar = ({ logOut }) => (
 
 const ServerName = () => (
   <div className="channel-list-header">
-    <div>MY SERVER IS A LONG NAME</div>
+    <div>MY SERVER</div>
   </div>
 );
 
@@ -28,7 +28,6 @@ const customChannelMessagingFilter = (channels) => {
 };
 
 const ChannelListContainer = ({
-  isCreating,
   setIsCreating,
   setCreateType,
   setIsEditing,

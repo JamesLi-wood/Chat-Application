@@ -35,7 +35,6 @@ const App = () => {
     <div className="app-wrapper">
       <Chat client={client} theme="team light">
         <ChannelListContainer
-          isCreating={isCreating}
           setIsCreating={setIsCreating}
           setCreateType={setCreateType}
           setIsEditing={setIsEditing}
