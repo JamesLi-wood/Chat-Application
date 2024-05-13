@@ -28,6 +28,7 @@ const TeamChannelList = ({
       <div className="team-channel-list-header">
         <div>{type == "team" ? "Channels" : "Direct Messages"}</div>
         <button
+          className="team-channel-button"
           onClick={() => {
             setCreateType(type);
             setIsCreating(true);
