@@ -31,11 +31,13 @@ const UserItem = ({ user, setSelectedUsers }) => {
     <div className="user-item-wrapper" onClick={handleSelected}>
       <div className="user-item-user-info">
         <Avatar image={user.image} name={user.fullName || user.id} size={32} />
-        <div className="user-item-name">{user.fullName || user.id}</div>
+        <div>{user.fullName || user.id}</div>
       </div>
-      <div className="user-item-invite">
-        {selected ? <div>selected</div> : <div>not selected</div>}
-      </div>
+      {selected ? (
+        <button className="user-item-selected"></button>
+      ) : (
+        <button className="user-item-notSelected"></button>
+      )}
     </div>
   );
 };
