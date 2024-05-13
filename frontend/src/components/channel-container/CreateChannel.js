@@ -57,7 +57,12 @@ const CreateChannel = ({ createType, setIsCreating }) => {
         <div>
           {createType == "team" ? "Create a New Channel" : "Direct Messaging"}
         </div>
-        <button onClick={() => setIsCreating(false)}>x</button>
+        <button
+          className="create-channel-header-button"
+          onClick={() => setIsCreating(false)}
+        >
+          X
+        </button>
       </div>
       {createType == "team" && (
         <ChannelNameInput setChannelName={setChannelName} />
