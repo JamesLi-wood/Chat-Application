@@ -3,7 +3,7 @@
 ## Project Information
 
 - This project is a chat application in which users are able to send messages to each other in the form of channels or direct messages.
-- Uses stream chat's api build the chat application and  
+- Uses stream chat's api to build the chat application
 
 ## How to run
 
